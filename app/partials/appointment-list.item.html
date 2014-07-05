@@ -1,0 +1,19 @@
+<div class="row detail-view">
+
+  <p>{{appointment}}</p>
+
+  <h3>{{appointment.title}}</h3>
+  <p>Time: <b>{{appointment.startTime}} - {{appointment.endTime}}</b></p>
+  <p>Appointment with: <b>{{appointment.appointmentWith}}</b></p>
+  <p>Description: <b>{{appointment.description}}</b></p>
+  <div class="row">
+    <div class="pull-right appointment-buttons">
+      <button class="btn btn-warning" ng-click="editAppointment">
+        <i class="fa fa-pencil-square-o"></i> Edit
+      </button>
+      <button class="btn btn-danger" ng-click="editAppointment">
+        <i class="fa fa-times"></i> Delete
+      </button>
+    </div>
+  </div>
+</div>

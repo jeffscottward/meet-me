@@ -1,0 +1,50 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+
+@import '../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+.thumbnail {
+  height: 200px;
+
+  img.pull-right {
+    width: 50px;
+  }
+}
+
+// Custom Styles
+
+.navbar-wrapper {
+  max-width: 1170px;
+  margin: auto;
+}
+
+.page-title {
+  margin: 0 0 20px 0;
+}
+
+// .create-appointment-btn {}
+
+.create-appointment-form {
+  
+  .submit-btn {
+    margin-right: 15px;
+  }
+}
+
+.appointment-list {
+  list-style: none;
+
+  .appointment-buttons {position: relative; right: 15px}
+
+  li {
+    display: block;
+    border: 1px solid black;
+    padding: 0 10px 10px 10px;
+  }
+}

@@ -16,9 +16,7 @@ angular.module('meetMe', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ui
       .state('appointments.appointment', {
         url: '/:appointment',
         templateUrl: 'partials/appointment-list.item.html',
-        controller: function($scope,$stateParams){
-          $scope.appointment = $stateParams.appointment;
-        }
+        controller: 'AppointmentsCtrl'
       });
 
     $urlRouterProvider.otherwise("/");

@@ -1,11 +1,10 @@
-<div class="row detail-view">
+<div ng-show="detailViewData" class="detail-view col-sm-6">
+  
 
-  <p>{{appointment}}</p>
-
-  <h3>{{appointment.title}}</h3>
-  <p>Time: <b>{{appointment.startTime}} - {{appointment.endTime}}</b></p>
-  <p>Appointment with: <b>{{appointment.appointmentWith}}</b></p>
-  <p>Description: <b>{{appointment.description}}</b></p>
+  <h3>{{detailViewData.title}}</h3>
+  <p>Time: <b>{{detailViewData.startTime}} - {{detailViewData.endTime}}</b></p>
+  <p>Appointment with: <b>{{detailViewData.appointmentWith}}</b></p>
+  <p>Description: <b>{{detailViewData.description}}</b></p>
   <div class="row">
     <div class="pull-right appointment-buttons">
       <button class="btn btn-warning" ng-click="editAppointment">

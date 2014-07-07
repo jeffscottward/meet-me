@@ -3,9 +3,10 @@
   <div class="col-sm-12 clearfix">
     <h2 class="page-title pull-left">Appointments</h2>
     <button class="btn btn-primary pull-right create-appointment-btn" ng-click="showTemplate()">Create Appointment</button>
+    {{appointmentStorage}}
   </div>
 
-  <ul class="col-sm-12 appointment-list">
+  <ul class="col-sm-6 appointment-list">
 
     <li class="create-appointment-item" ng-show="creatingAppointment">
       <form class="create-appointment-form" ng-submit="createAppointment(newAppointment)">

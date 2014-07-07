@@ -13,7 +13,7 @@ angular.module('meetMe')
       $scope.currentAppointment = $stateParams.appointment;
 
       // Grab Data for All Existing Appointments
-      $scope.appointments = appointmentStorage.data
+      $scope.appointments = appointmentStorage.data;
 
       // Current View State
       $scope.creatingAppointment = false;

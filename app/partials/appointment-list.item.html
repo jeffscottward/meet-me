@@ -1,13 +1,19 @@
-<div ng-show="detailViewData" class="detail-view col-sm-6">
+<div ng-show="detailViewData.length" ng-hide="detailViewEditing" class="detail-view col-sm-6">
   
-
   <h3>{{detailViewData.title}}</h3>
-  <p>Time: <b>{{detailViewData.startTime}} - {{detailViewData.endTime}}</b></p>
-  <p>Appointment with: <b>{{detailViewData.appointmentWith}}</b></p>
-  <p>Description: <b>{{detailViewData.description}}</b></p>
+  <p>
+    Time: <b>{{detailViewData.startTime}} - {{detailViewData.endTime}}</b>
+  </p>
+  <p>
+    Appointment with: <b>{{detailViewData.appointmentWith}}</b>
+  </p>
+  <p>
+    Description: <b>{{detailViewData.description}}</b>
+  </p>
+
   <div class="row">
     <div class="pull-right appointment-buttons">
-      <button class="btn btn-warning" ng-click="editAppointment">
+      <button class="btn btn-warning" ng-click="editAppointment()">
         <i class="fa fa-pencil-square-o"></i> Edit
       </button>
       <button class="btn btn-danger" ng-click="deleteAppointment('{{detailViewData.uid}}')">
@@ -15,4 +21,45 @@
       </button>
     </div>
   </div>
+
 </div>
+
+<div ng-show="detailViewEditing" class="detail-view col-sm-6">
+  
+  <h3>
+    <input ng-model="detailViewData.title" placeholder="Title"/>
+  </h3>
+  <p>
+    Time: 
+    <b>
+      <input ng-model="detailViewData.startTime" placeholder="Start Time"/>
+      -
+      <input ng-model="detailViewData.endTime" placeholder="End Time"/>
+    </b>
+  </p>
+  <p>
+    Appointment with: 
+    <b>
+      <input ng-model="detailViewData.appointmentWith" placeholder="Appointment With"/>
+    </b>
+  </p>
+  <p>
+    Description: 
+    <b>
+      <input ng-model="detailViewData.description" placeholder="Description"/>
+    </b>
+  </p>
+  
+  <div class="row">
+    <div class="pull-right appointment-buttons">
+      <button class="btn btn-success" ng-click="updateAppointment()">
+        <!-- <i class="fa fa-pencil-square-o"></i> --> Save
+      </button>
+      <button class="btn btn-danger" ng-click="deleteAppointment('{{detailViewData.uid}}')">
+        <i class="fa fa-times"></i> Delete
+      </button>
+    </div>
+  </div>
+
+</div>
+

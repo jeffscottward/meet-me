@@ -3,7 +3,6 @@
   <div class="col-sm-12 clearfix">
     <h2 class="page-title pull-left">Appointments</h2>
     <button class="btn btn-primary pull-right create-appointment-btn" ng-click="showTemplate()">Create Appointment</button>
-    {{appointmentStorage}}
   </div>
 
   <ul class="col-sm-6 appointment-list">
@@ -11,10 +10,20 @@
     <li class="create-appointment-item" ng-show="creatingAppointment">
       <form class="create-appointment-form" ng-submit="createAppointment(newAppointment)">
         <h4>Create a New Appointment</h4>
-        <p>Title: <input type="text" ng-model="newAppointment.title"/></p>
-        <p>Time: <b><input type="text" ng-model="newAppointment.startTime"/> - <input type="text" ng-model="newAppointment.endTime"/></b></p>
+        <p>
+          Title: <input type="text" ng-model="newAppointment.title"/>
+        </p>
+        <p>Time: 
+          <b>
+            <input type="text" ng-model="newAppointment.startTime"/> - <input type="text" ng-model="newAppointment.endTime"/>
+          </b>
+        </p>
         <p>Appointment with: <b><input type="text" ng-model="newAppointment.appointmentWith"/></b></p>
-        <p>Description: <b><input type="text" ng-model="newAppointment.description"/></b></p>
+        <p>Description: 
+          <b>
+            <input type="text" ng-model="newAppointment.description"/>
+          </b>
+        </p>
         <div class="row">
           <input type="submit" value="Save" class="pull-right btn btn-success submit-btn"/>
         </div>
@@ -23,19 +32,9 @@
 
     <li id="{{appointment.uid}}" ng-repeat="appointment in appointments"> 
       <h3><a ng-href="#/appointments/{{appointment.uid}}">{{appointment.title}}</a></h3>
-      <p>Time: <b>{{appointment.startTime}}</b></p>
-      <!-- <p>Appointment with: <b>{{appointment.appointmentWith}}</b></p>
-      <p>Description: <b>{{appointment.description}}</b></p> -->
-      <!-- <div class="row">
-        <div class="pull-right appointment-buttons">
-          <button class="btn btn-warning" ng-click="editAppointment">
-            <i class="fa fa-pencil-square-o"></i> Edit
-          </button>
-          <button class="btn btn-danger" ng-click="editAppointment">
-            <i class="fa fa-times"></i> Delete
-          </button>
-        </div>
-      </div> -->
+      <p>
+        Time: <b>{{appointment.startTime}}</b>
+      </p>
     </li>
 
   </ul>

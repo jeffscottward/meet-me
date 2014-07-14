@@ -19,6 +19,31 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
 
 // Custom Styles
 
+.notepad-entry,
+.notepad {
+  width: 600px;
+  resize: none;
+  min-height: 100px
+}
+
+.notepad {
+   background: url(http://i.stack.imgur.com/ynxjD.png) repeat-y;
+   height: 300px;
+   font: normal 14px verdana;
+   line-height: 25px;
+   padding: 2px 10px;
+   border: solid 1px #ddd;
+   padding-left: 100px;
+   background-position-x: -10px;
+   font-family: 'Rouge Script', cursive;
+   font-size: 32px;
+   color: brown;
+}
+
+.notepad-entry {
+
+}
+
 .navbar-wrapper {
   max-width: 1170px;
   margin: auto;

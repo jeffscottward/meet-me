@@ -15,6 +15,7 @@
     <!-- build:css({.tmp,app}) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+    <link href='http://fonts.googleapis.com/css?family=Rouge+Script' rel='stylesheet' type='text/css'>
     <!-- endbuild -->
 
     <!-- build:js scripts/modernizr.js -->
@@ -48,7 +49,15 @@
 
     <div class="container">
 
+      <!-- <div class="notepad">{{notepadText}}</div>
+      <textarea class="notepad-entry" ng-model="notepadText"></textarea> -->
+
+      <!-- <div ng-include="'partials/notepad-element.html'"></ng-notepad> -->
+
+      <!-- <notepad></notepad> -->
+
       <div ui-view>
+
 
       </div>
 
@@ -87,6 +96,7 @@
     <script src="scripts/main/main-ctrl.js"></script>
     <script src="scripts/appointments/appointments-storage.js"></script>
     <script src="scripts/appointments/appointments-ctrl.js"></script>
+    <script src="scripts/notepad/notepad-directive.js"></script>
     <!-- inject:partials -->
     <!-- endinject -->
     <!-- endbuild -->
